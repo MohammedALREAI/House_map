@@ -1,0 +1,7 @@
+{
+  "name": "house_map",
+  "version": "1.0.0",
+  "description": "simple  House  App",
+  "main": "index.js",
+  "license": "MIT"
+}

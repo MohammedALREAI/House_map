@@ -1,0 +1,97 @@
+  mutation CreateSignatureMutation {
+    createImageSignature {
+      signature
+      timestamp
+    }
+  }
+`;
+
+  mutation CreateHouseMutation($input: HouseInput!) {
+    createHouse(input: $input) {
+      id
+    }
+  }
+`;
+
+  mutation UpdateHouseMutation($id: String!, $input: HouseInput!) {
+    updateHouse(id: $id, input: $input) {
+      id
+      image
+      publicId
+      latitude
+      longitude
+      bedrooms
+      address
+    }
+  }
+`;
+
+
+ query EditHouseQuery($id: String!) {
+    house(id: $id) {
+      id
+      userId
+      address
+      image
+      publicId
+      bedrooms
+      latitude
+      longitude
+    }
+  }
+`;
+
+
+
+
+  query EditHouseQuery($id: String!) {
+    house(id: $id) {
+      id
+      userId
+      address
+      image
+      publicId
+      bedrooms
+      latitude
+      longitude
+    }
+  }
+`;
+
+
+
+
+
+  query ShowHouseQuery($id: String!) {
+    house(id: $id) {
+      id
+      userId
+      address
+      publicId
+      bedrooms
+      latitude
+      longitude
+      nearby {
+        id
+        latitude
+        longitude
+      }
+    }
+  }
+
+
+  query HousesQuery($bounds: BoundsInput!) {
+    houses(bounds: $bounds) {
+      id
+      latitude
+      longitude
+      address
+      publicId
+      bedrooms
+    }
+  }
+
+  
+  mutation DeleteHouse($id: String!) {
+    deleteHouse(id: $id)
+  }
